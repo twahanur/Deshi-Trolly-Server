@@ -23,8 +23,8 @@ const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
   console.log(`${!!err ? 'Database Connection Failed' : 'Database Connection Successful'}`);
-  const productCollection = client.db("Deshi-Trolly").collection("Products");
-  const ordersCollection = client.db("FoodBasket").collection("orders");
+  const productsCollection = client.db("Deshi-Trolly").collection("Products");
+  const ordersCollection = client.db("Deshi-Trolly").collection("orders");
 
 
     // Get Products from database
